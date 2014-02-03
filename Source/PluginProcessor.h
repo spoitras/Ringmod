@@ -71,10 +71,6 @@ public:
     void setStateInformation (const void* data, int sizeInBytes) override;
     enum Parameters{MasterBypass=0,Frequency,ModSetting,Mix,Drive,LFOAmount,LFORate,LFOWaveType,totalNumParam};
     
-    float getLFOPhase(){return myLFO.getPhase();};
-    void resetLFOFlag(){myLFO.resetFlag();};
-    
-    
     void setModFreq(float low, float high){lowFreq=low;highFreq=high;};
     float lin2Log(float logMin, float logMax, float linValue){
         float linMin = 0.01f;

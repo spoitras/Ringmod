@@ -44,24 +44,13 @@ public:
     float getTick(){
         currentTick = mySine.tick();
         
-        if (currentTick==1.0f) {
-            newPhase=true;
-        }
-        
         if (LFOWaves[Sine]) {
             return currentTick * amount;
         }else{
             return sgn(currentTick) * amount;
         }
     };
-    
-    bool getPhase(){
-        return newPhase;
-    };
-    
-    void resetFlag(){
-        newPhase = false;
-    };
+
     
     
 private:
@@ -69,7 +58,6 @@ private:
     float rate;
     float amount;
     float currentTick;
-    bool newPhase;
     
     int sgn(float val) {
         return (float(0) < val) - (val < float(0));

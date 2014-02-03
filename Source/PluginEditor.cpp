@@ -239,12 +239,6 @@ RingmodAudioProcessorEditor::RingmodAudioProcessorEditor (RingmodAudioProcessor*
     HiToggle->addListener (this);
     HiToggle->setColour (ToggleButton::textColourId, Colours::cadetblue);
 
-    addAndMakeVisible (LFOIndicator = new TextButton ("LFOIndicator"));
-    LFOIndicator->setButtonText (String::empty);
-    LFOIndicator->addListener (this);
-    LFOIndicator->setColour (TextButton::buttonColourId, Colour (0xff292729));
-    LFOIndicator->setColour (TextButton::buttonOnColourId, Colour (0xffee5d45));
-
 
     //[UserPreSize]
     //[/UserPreSize]
@@ -288,7 +282,6 @@ RingmodAudioProcessorEditor::~RingmodAudioProcessorEditor()
     SineToggle = nullptr;
     LowToggle = nullptr;
     HiToggle = nullptr;
-    LFOIndicator = nullptr;
 
 
     //[Destructor]. You can add your own custom destruction code here..
@@ -331,7 +324,6 @@ void RingmodAudioProcessorEditor::resized()
     SineToggle->setBounds (proportionOfWidth (0.0950f), 360, proportionOfWidth (0.1250f), proportionOfHeight (0.0300f));
     LowToggle->setBounds (proportionOfWidth (0.7600f), 360, proportionOfWidth (0.1250f), proportionOfHeight (0.0300f));
     HiToggle->setBounds (proportionOfWidth (0.7600f), 392, proportionOfWidth (0.1250f), proportionOfHeight (0.0300f));
-    LFOIndicator->setBounds (proportionOfWidth (0.4850f), proportionOfHeight (0.4850f), proportionOfWidth (0.0300f), proportionOfHeight (0.0300f));
     //[UserResized] Add your own custom resize handling here..
     //[/UserResized]
 }
@@ -424,11 +416,6 @@ void RingmodAudioProcessorEditor::buttonClicked (Button* buttonThatWasClicked)
         FreqLabel->setText(ourProcessor->getParameterText(RingmodAudioProcessor::Frequency), dontSendNotification);
         //[/UserButtonCode_HiToggle]
     }
-    else if (buttonThatWasClicked == LFOIndicator)
-    {
-        //[UserButtonCode_LFOIndicator] -- add your button handler code here..
-        //[/UserButtonCode_LFOIndicator]
-    }
 
     //[UserbuttonClicked_Post]
     //[/UserbuttonClicked_Post]
@@ -515,15 +502,6 @@ void RingmodAudioProcessorEditor::timerCallback()
     if (ourProcessor->getParameterText(RingmodAudioProcessor::LFORate).compare(RateLAbel->getText())!=0) {
         RateLAbel->setText(ourProcessor->getParameterText(RingmodAudioProcessor::LFORate), dontSendNotification);
     }
-
-    if (ourProcessor->getLFOPhase() &&
-        ourProcessor->getParameter(RingmodAudioProcessor::LFOAmount)>0.0f) {
-        LFOIndicator->setToggleState(true, dontSendNotification);
-        ourProcessor->resetLFOFlag();
-    }else{
-        LFOIndicator->setToggleState(false, dontSendNotification);
-    }
-
 }
 
 
@@ -665,10 +643,6 @@ BEGIN_JUCER_METADATA
                 virtualName="" explicitFocusOrder="0" pos="76% 392 12.5% 3%"
                 tooltip="High Frequencies" txtcol="ff5f9ea0" buttonText="HIGH"
                 connectedEdges="0" needsCallback="1" radioGroupId="2" state="0"/>
-  <TEXTBUTTON name="LFOIndicator" id="4a5fd16ae3f6032e" memberName="LFOIndicator"
-              virtualName="" explicitFocusOrder="0" pos="48.5% 48.5% 3% 3%"
-              bgColOff="ff292729" bgColOn="ffee5d45" buttonText="" connectedEdges="0"
-              needsCallback="1" radioGroupId="0"/>
 </JUCER_COMPONENT>
 
 END_JUCER_METADATA

@@ -86,7 +86,6 @@ private:
     ScopedPointer<ToggleButton> SineToggle;
     ScopedPointer<ToggleButton> LowToggle;
     ScopedPointer<ToggleButton> HiToggle;
-    ScopedPointer<TextButton> LFOIndicator;
 
 
     //==============================================================================
