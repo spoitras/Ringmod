@@ -6,23 +6,23 @@ sound. I don't really know the MF-102 sounds as I don't own one, but I've modele
 does.
 
 Licence
-=======
+-------
 Ringmod is shared under GNU Public Licence (GPLv2 or later).
 
 Third Party Code
-=================
+----------------
 Ringmod is made possible thanks to the following:
 
-- JUCE (Jules' Utility Class Extensions) shared under GNU Public Licence.
+- [JUCE] (http://www.juce.com/) (Jules' Utility Class Extensions) shared under GNU Public Licence.
 - The Synthesis ToolKit in C++ (STK) Copyright (c) 1995-2012 Perry R. Cook and Gary P. Scavone 
 
-The latter was made packaged into a JUCE module by GitHub user drowaudio.
+The latter was made packaged into a JUCE module by GitHub user [drowaudio] (https://github.com/drowaudio/stk_module).
 
 All the above can be found under Ringmod/JuceLibraryCode/modules/
 
 
 What does it do?
-================
+----------------
 There are two sections:
 
 - (left) Low frequency oscillator (LFO) that modulates the frequency of the ring modulation.
