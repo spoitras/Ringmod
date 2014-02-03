@@ -14,7 +14,7 @@ Third Party Code
 Ringmod is made possible thanks to the following:
 
 - [JUCE] (http://www.juce.com/) (Jules' Utility Class Extensions) shared under GNU Public Licence.
-- The Synthesis ToolKit in C++ (STK) Copyright (c) 1995-2012 Perry R. Cook and Gary P. Scavone 
+- [The Synthesis ToolKit] (https://ccrma.stanford.edu/software/stk/) in C++ (STK) Copyright (c) 1995-2012 Perry R. Cook and Gary P. Scavone 
 
 The latter was made packaged into a JUCE module by GitHub user [drowaudio] (https://github.com/drowaudio/stk_module).
 
