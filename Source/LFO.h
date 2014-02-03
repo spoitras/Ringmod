@@ -10,7 +10,7 @@
 
 #ifndef LFO_H_INCLUDED
 #define LFO_H_INCLUDED
-#include "SineWave.h"
+#include "..\..\JuceLibraryCode\modules\stk\stk\SineWave.h"
 
 
 class LFO{
