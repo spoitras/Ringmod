@@ -2,7 +2,7 @@ Ringmod
 =======
 
 Ring Modulation VST plugin for OS X and Windows. Very much inspired by [Moog's MF-102] (http://www.moogmusic.com/products/moogerfoogers/mf-102-ring-modulator) in designed, if not in actual
-sound. I don't really know the MF-102 sounds as I don't own one, but I've modeled what the user manual tells us it
+sound. I don't really know how the MF-102 sounds as I don't own one, but I've modeled what the [user manual] (http://www.moogmusic.com/sites/default/files/mf-102.pdf) tells us it
 does.
 
 Licence
