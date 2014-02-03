@@ -13,7 +13,7 @@
 
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "LFO.h"
-#include "SineWave.h"
+#include "..\..\JuceLibraryCode\modules\stk\stk\SineWave.h"
 #include "Math.h"
 
 
