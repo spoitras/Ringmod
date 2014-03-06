@@ -268,6 +268,8 @@ void RingmodAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffer&
                 
                 if (UserParams[LFOAmount]>0) {
                     mySine.setFrequency((lin2Log(lowFreq, highFreq, UserParams[Frequency])* myLFO.getTick()) + (lin2Log(lowFreq, highFreq, UserParams[Frequency])));
+                }else{
+                    mySine.setFrequency((lin2Log(lowFreq, highFreq, UserParams[Frequency])) + (lin2Log(lowFreq, highFreq, UserParams[Frequency])));
                 }
                 
                 float tick = mySine.tick();
